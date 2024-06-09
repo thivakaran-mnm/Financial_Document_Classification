@@ -7,8 +7,8 @@ from nltk.corpus import stopwords
 import streamlit as st
 
 # download the necessary NLTK data files(once)
-#nltk.download('stopwords')
-#nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('punkt')
 
 def extract_text_from_file(html_file):
     
