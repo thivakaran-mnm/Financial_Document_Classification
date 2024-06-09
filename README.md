@@ -6,6 +6,30 @@ This project aims to classify financial documents into categories such as Balanc
 
 Text classification is crucial in Natural Language Processing (NLP), where the goal is to categorize text data into predefined labels. In this project, we focus on classifying financial documents based on their textual content.
 
+## Features
+
+-Extracts text from HTML files.
+
+-Cleans and preprocesses the extracted text.
+
+-Transforms the text into TF-IDF vectors.
+
+-Predicts the category of the financial statement using a pre-trained classification model.
+
+## Requirements
+
+-Python 3.1
+
+-Streamlit
+
+-NLTK
+
+-BeautifulSoup4
+
+-scikit-learn
+
+-pickle
+
 ## Approach
 
 ### Data Sources
@@ -40,14 +64,42 @@ Hyperparameter tuning using grid search was performed to optimize the SVC model'
 
 The trained SVC model and TF-IDF vectorizer were used to predict the category of new financial documents.
 
-## Deployment
+## Setup Instructions
 
-A Streamlit application was deployed to provide a user-friendly tool for real-time classification of financial documents.
+**Step 1**: Install Required Libraries
 
-## Results
+Install the required libraries using pip:
 
-The final SVC model achieved high accuracy, precision, recall, and F1-score on the test dataset, indicating its effectiveness in classifying financial documents.
+pip install streamlit nltk beautifulsoup4 scikit-learn
+
+**Step 2**: Download NLTK Data
+
+Download the necessary NLTK data files:
+
+nltk.download('stopwords')
+
+nltk.download('punkt')
+
+**Step 3**: Prepare the Models
+
+Place pre-trained models (tfidf_vectorizer_1.pkl and Findoc_Classification_model.pkl) in the specified directory.
+
+**Step 4**: Run the Application
+
+Save the main script as findoc_classification.py and run it using Streamlit:
+
+streamlit run findoc_classification.py
 
 ## Conclusion
 
 This project successfully developed a machine learning model for financial document classification. Future work may involve exploring advanced NLP techniques and expanding the dataset for further improvements.
+
+## Acknowledgements
+
+-Streamlit
+
+-NLTK
+
+-BeautifulSoup
+
+-scikit-learn
